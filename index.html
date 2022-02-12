@@ -1,0 +1,37 @@
+<!-- DISPLAY LOCATION MAP  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>Location Map</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <!-- Display the Map -->
+    <div id="map"></div>
+    <!-- Copyright Section  -->
+        <p style="color:black;text-align: center;">© Developed by ARPITA SANTRA</p>
+
+
+    <!-- Location Update  -->
+    <script>
+      // Call a function every 10000 milliseconds (or 10 seconds)
+      window.setInterval('refresh()', 10000); 	
+      // Update the location every 10 seconds
+      function refresh() {
+          window .location.reload();
+      }
+    </script>
+    <script src="map.js"></script>
+    <script src="fetch.js"></script>
+    <!-- Use Your own API_KEY -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn-Wmj3TBsSRHrlUCw-fNME3tLaHy6bBg&callback=initMap&libraries=&v=weekly"
+      async>
+    </script>
+</body>
+</html>

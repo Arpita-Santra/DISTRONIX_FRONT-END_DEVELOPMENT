@@ -1,0 +1,59 @@
+<!-- HTML SENSOR FORM  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html;IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT SENSOR</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <!-- Form for taking the input -->
+  <div class="sensor">
+    <div class="form">
+    <form id="form" name="form">
+      <h2 style=" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:black;" >CHOOSE SENSOR</h2>
+      <br><br>
+      <!-- Input Field for sensor id -->
+        <input type="text" name="sensor_id" id="sensor" placeholder="Sensor Id*"  required autocomplete="0">
+        <br>
+      <!-- Input Field for device id (use d8c68c44e70825b746c80c41add7279a to check the application) -->
+        <input type="text" name="device_id" id="device" placeholder="Device Id*" required autocomplete="0">  
+        <br><br>
+        <!-- Submit button -->
+        <button type="submit" id="submit">Submit</button>
+        <!-- Popup section -->
+        <center>
+          <div id="CustomAlert">
+              <div id="box">
+                  <div class="heading">
+                      <h3 id="top">The coordinates of your Device is :</h3>
+                  </div>
+                  <div class="content">
+                    <!-- Display the value of latitude and longitude  -->
+                      <h3 id="latitude"></h3><br>
+                      <h3> Go for Google Map Location ?</h3><br>
+                      <!-- Popup Buttons  -->
+                      <button type="button" id="confirmbtn" onclick="hidealert()">Yes</button>
+                      <button type="button" id="confirmbtn" onclick="document.getElementById('CustomAlert').style.display='none';">No</button>
+                  </div>
+              </div>
+          </div>
+      </center>
+    </form>
+    </div>
+  </div>
+  <!-- Copyright section  -->
+  <div>
+    <p style="color:white;text-align: right;">© Developed by ARPITA SANTRA</p>
+  </div>
+
+
+<script src="map.js"></script>
+<script src="fetch.js"></script>
+
+
+</body>
+</html>
